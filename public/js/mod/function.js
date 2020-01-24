@@ -2,6 +2,7 @@ const title = document.getElementById("title");
 const type = document.getElementById("type");
 const supplement = document.getElementById("supplement");
 const answers = document.getElementById("answers");
+const quiz = new Quiz;
 
 // クイズ取得
 const getQuestions = async () => {
