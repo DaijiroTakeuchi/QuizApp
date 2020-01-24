@@ -2,7 +2,6 @@ const title = document.getElementById("title");
 const type = document.getElementById("type");
 const supplement = document.getElementById("supplement");
 const answers = document.getElementById("answers");
-const quiz = new Quiz;
 
 // クイズ取得
 const getQuestions = async () => {
@@ -14,7 +13,7 @@ const getQuestions = async () => {
   const obj = await data.json();
 
   // quizを更新
-  this.quiz = new Quiz(obj.results);
+  quiz = new Quiz(obj.results);
 
   quiz.displayQuiz();
 };
