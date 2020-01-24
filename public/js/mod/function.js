@@ -14,7 +14,7 @@ const getQuestions = async () => {
   const obj = await data.json();
 
   // quizを更新
-  quiz = new Quiz(obj.results);
+  this.quiz = new Quiz(obj.results);
 
   quiz.displayQuiz();
 };
