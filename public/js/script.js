@@ -3,6 +3,7 @@ const quiz = new Quiz;
 
 const getQuestion = document.getElementById('get-questions');
 
-getQuestion.addEventListener('click', () => {
+getQuestion.addEventListener('click', (e) => {
+  e.preventDefault();
   quiz.getQuiz();
 });

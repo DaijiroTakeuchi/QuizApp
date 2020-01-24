@@ -98,7 +98,8 @@ const displayQuizAnswer = (correct) => {
 const returnQuiz = () => {
   const addGetButtonId = document.getElementById("return");
 
-  addGetButtonId.addEventListener("click", () => {
+  addGetButtonId.addEventListener("click", (e) => {
+    e.preventDefault();
     title.innerText = "ようこそ";
     type.innerText = "";
     supplement.innerText = "以下のボタンをクリック";
@@ -113,7 +114,8 @@ const returnQuiz = () => {
 
     const addGetButtonId = document.getElementById("re-question");
 
-    addGetButtonId.addEventListener("click", () => {
+    addGetButtonId.addEventListener("click", (e) => {
+      e.preventDefault();
       quiz.initializeQuiz();
       getQuestions();
     });

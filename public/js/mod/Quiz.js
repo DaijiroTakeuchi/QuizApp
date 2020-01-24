@@ -24,7 +24,8 @@ class Quiz {
   answerQuiz() {
     // 正解ボタンを押したとき
     const getAnswersCorrect = document.getElementById('correct');
-    getAnswersCorrect.addEventListener('click', () => {
+    getAnswersCorrect.addEventListener('click', (e) => {
+      e.preventDefault();
       this._correct += 1;
       this._number += 1;
       this.displayQuiz();
@@ -33,7 +34,8 @@ class Quiz {
     // 不正解ボタンを押したとき
     const getAnswersIncorrect = document.getElementsByClassName('incorrect');
     for (let i = 0; i < getAnswersIncorrect.length; i++) {
-      getAnswersIncorrect[i].addEventListener('click', () => {
+      getAnswersIncorrect[i].addEventListener('click', (e) => {
+        e.preventDefault();
         this._incorrect += 1;
         this._number += 1;
         this.displayQuiz();
